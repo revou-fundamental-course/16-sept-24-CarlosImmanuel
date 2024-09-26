@@ -1,12 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+<font-></font-family>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>RevoU Mini Project</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <script>
+        // Ketika halaman dimuat, menampilkan prompt untuk memasukkan nama
+        window.onload = function() {
+            var userName = prompt("Masukkan nama Anda:");
+            if (userName) {
+                // Tampilkan nama
+                document.getElementById("name").innerText = userName + ", ";
+            } else {
+                // Jika tidak diisi, tampilkan teks default
+                document.getElementById("name").innerText = " Pengguna, ";
+            }
+        };
+    </script>
+
 </head>
-<body>
+<body >
+    <header class="main-header">
+        <!--logo-->
+        <div class="profile-icon"></div>
+        <!--navigation-->
+        <nav>
+            <a href="#section-home">
+                <p><b>Home</b></p>
+            </a>
+            <a href="#section-myprofile">
+                <p><b>My Profile</b></p>
+            </a>
+            <a href="#section-portofolio">
+                <p><b>Portofolio</b></p>
+            </a>
+            <a href="#section-message">
+                <p><b>Message Us</b></p>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- home -->
+        <section id="section-home">
+            <header>
+                <h2>Hi <span id="name"></span>Welcome To My Website.
+                    Ini adalah website mini project saya.
+                </h2>
+            <script src="./js/script.js"></script>
+            </header>
+            <article>
+                    <div class="photo-banner" class="">
+                        <img class="myslides" src="./assets/What-is-Coding.jpg" style="width:100%;">
+                    </div>
+                    <script src="./js/script.js"></script>
+            </article>
+           
+        </section>
+    <hr color="white"/>
+
+        <!--animalprofile-->
+        <section id="section-myprofile">
+            <header>
+                <h1 style="color: rgb(0, 0, 0);">My Profile</h1>
+            </header>
+            <div class="profile-icon-container">
+                <div>
+                    <div class="gambar1"></div>
+                    <h5>Nama Saya Carlos Immanuel.</h5>
+                </div>
+                <div>
+                    <div class="gambar2"></div>
+                    <h5>Saya adalah mahasiswa.</h5>
+                </div>
+                <div>
+                    <div class="gambar3"></div>
+                    <h5>Saya mempunyai basic programming.</h5>
+                </div>
+            </div>
+        </section>
+        <hr color="white"/>
+
+        <!--portofolio-->
+        <section id="section-portofolio">
+            <header>
+                <h1>Portofolio</h1>
+            </header>
+            <br>
+            <h4 style="margin-left: 50px;">
+                Memiliki basic bahasa pemrograman C++, Java, HTML, JS, PHP, CSS, Flutter
+            </h4>
+            <img src="./assets/Bahasa.jpg" width="90%" style="margin-left: 50px; margin-top: 10px;">
+        </section>
+            <hr color="white"/>
+        <!--message-->
+
+        <section id="section-message">
+            
+            <header>
+                <h1 style="color: black;">Message Us</h1>
+            </header>
+            <br/>
+            <section>
+                <section>
+                    <!--form-->
+                    <form name="message-form" onsubmit="return validateMessage()">
+                        <h3>Nama :<input placeholder="Nama" type="text" name="full-name" /></h3>
+                        <br />
+            
+                        <h3>Tanggal Lahir : <input type="date" name="birth-date" /></h3>
+                        <br/>
+            
+                        <h3>Jenis Kelamin : 
+                        <input type="radio" id="Laki-laki" name="gender" value="Laki-laki" />
+                        <label for="Laki-laki">Laki-laki</label>
+                        <input type="radio" id="Perempuan" name="gender" value="Perempuan" />
+                        <label for="Perempuan">Perempuan</label></h3>
+                        <br/>
+            
+                        <h3>Pesan : <textarea placeholder="Pesan" name="messages"></textarea></h3>
+                        <br/>
+            
+                        <input type="submit" value="submit" />
+                        <script src="./js/script.js"></script>
+                    </form>
+                    
+                    </section>
+                    <!--result form-->
+                    <div>
+                        <h3>Nama : <span id="sender-full-name"></span></h3>
+                        <h3>Tanggal lahir : <span id="sender-birth-date"></span></h3>
+                        <h3>Jenis kelamin : <span id="sender-gender"></span></h3>
+                        <h3>Pesan : <span id="sender-messages"></span></h3>
+                    </div>
+                    <script src="./js/script.js"></script>
+            </section>
+        </section>
+
+        <!--responsive-->
+        
+    </main>
+    <hr color="white" style="height: 5px;"/>
+
+    <footer>
+        <p>Created By Carlos Immanuel</p>
+    </footer>
     
 </body>
 </html>
